@@ -12,6 +12,6 @@ import com.meteergin.orderservice.entity.Order;
  *
  * @author mergin
  */
-public interface OrderRepository extends JpaRepository<Order, Integer> {
+public interface OrderRepository extends JpaRepository<Order, Long> {
     
 }

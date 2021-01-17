@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import com.meteergin.orderservice.entity.Order;
 import java.util.List;
 import java.util.Optional;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 
 /**
@@ -32,7 +31,7 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
-    public Optional<Order> findById(int id) {
+    public Optional<Order> findById(Long id) {
         return orderRepository.findById(id);
     }
 
@@ -40,7 +39,7 @@ public class OrderService {
         return orderRepository.save(order);
     }
     
-    public void deleteOrderById(int id) {
+    public void deleteOrderById(Long id) {
         orderRepository.deleteById(id);
     }
     

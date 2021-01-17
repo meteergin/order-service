@@ -6,6 +6,8 @@
 package com.meteergin.orderservice.entity;
 
 import java.io.Serializable;
+import java.util.Date;
+import java.util.UUID;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -30,9 +32,9 @@ public class Order implements Serializable {
     
     @Id
     @GeneratedValue
-    private int id;
-    private String name;
-    private int quantity;
-    private double price;
+    private Long id;
+    private Date date;
+    private String status;
+    private UUID customerId;
     
 }
